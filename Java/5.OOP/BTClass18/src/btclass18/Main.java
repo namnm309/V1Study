@@ -17,7 +17,12 @@ public class Main {
     
     Scanner sc = new Scanner(System.in);
     private Shop obj;
-    public void Menu() {
+
+    public Main(){
+        this.obj=new Shop();
+    }
+
+    public void run() {
         ArrayList<String> menu = new ArrayList<>();
         menu.add("1.Add new product");
         menu.add("2.Remove product");
@@ -44,8 +49,9 @@ public class Main {
                     System.out.println("Mời bạn nhập max : ");
                     int max=sc.nextInt();
                     obj.searchProduct(choice, choice);
-                    break;
-                case 5:
+                    break;           
+                
+                    case 5:
                     System.out.println("Exit!");
                     System.exit(0);
                     break;
@@ -59,13 +65,14 @@ public class Main {
             System.out.println((i + 1) + " - " + list.get(i));
         }
         System.out.println("=============================");
-        System.out.println("Please choose from 1 to 7 :");
+        System.out.println("Mời chọn từ 1 to 5 :");
         int choose = sc.nextInt();
 
         return choose;
     }
 
     public static void main(String[] args) {
-        
+        Main obj=new Main();
+        obj.run();
     }
 }

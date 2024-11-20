@@ -29,7 +29,7 @@ public class Shop {
         System.out.println("Mời bạn nhập mô tả sản phẩm : ");
         String mota=sc.nextLine();
         System.out.println("Mời bạn nhập giá tiền sp : ");
-        double giatien=sc.nextDouble();
+        int giatien=sc.nextInt();
         sc.nextLine();
         System.out.println("Mời bạn nhập đánh giá sp 1-5 sao : ");
         int danhgia=sc.nextInt();
@@ -59,7 +59,7 @@ public class Shop {
         }
     }
     
-    public void searchProduct(double min, double max) {
+    public void searchProduct(int min, int max) {
         for (Productt product : product) {
             if (product.getPrice() >= min && product.getPrice() <= max) {
                 product.viewInfo();
@@ -68,6 +68,6 @@ public class Shop {
     }
 
         public void sortProduct() {
-        product.sort((p1, p2) -> Double.compare(p1.getPrice(), p2.getPrice()));
+        product.sort((p1, p2) -> Integer.compare(p1.getPrice(), p2.getPrice()));
     }
 }

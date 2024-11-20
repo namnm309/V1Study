@@ -12,13 +12,13 @@ package btclass18;
 public class Productt {
     private String name;
     private String description;
-    private double price;
+    private int price;
     private int rate;
 
     public Productt() {
     }
 
-    public Productt(String name, String description, double price, int rate) {
+    public Productt(String name, String description, int price, int rate) {
         this.name = name;
         this.description = description;
         this.price = price;
@@ -41,11 +41,11 @@ public class Productt {
         this.description = description;
     }
 
-    public double getPrice() {
+    public int getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(int price) {
         this.price = price;
     }
 
